@@ -3,9 +3,19 @@ import React from 'react';
 import HomePage from './homepage.js';
 import ContactUs from './contactus.js';
 
-/*
-Copy the Web Chat code from Watson Assitant and paste it here
-*/
+
+window.watsonAssistantChatOptions = {
+integrationID: "b96d719e-5ff4-44c9-aaf0-fd7ea9622492", 
+region: "us-south", 
+serviceInstanceID: "e79978e4-5622-468a-b028-f932f1f55902", 
+onLoad: async (instance) => { await instance.render(); }
+};
+setTimeout(function(){
+const t=document.createElement('script');
+t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+document.head.appendChild(t);
+});
+
 
 class App extends React.Component {
 
