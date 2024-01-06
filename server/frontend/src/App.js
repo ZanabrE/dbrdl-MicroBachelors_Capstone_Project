@@ -27,6 +27,10 @@ class App extends React.Component {
     this.setState({pageshown:<HomePage/>});    
   }
   
+  setPageAboutUs = ()=> {
+    this.setState({pageshown:<AboutUs/>})
+  }
+
   setPageContactUs = ()=> {
     this.setState({pageshown:<ContactUs/>});    
   }
@@ -44,7 +48,7 @@ class App extends React.Component {
               <li class="nav-item">
                 <a class="nav-link" href="#" onClick={this.setPageAboutUs}>About Us</a>
               </li>
-              
+
               <li class="nav-item">
                 <a class="nav-link" href="#" onClick={this.setPageContactUs}>Contact Us</a>
               </li>
